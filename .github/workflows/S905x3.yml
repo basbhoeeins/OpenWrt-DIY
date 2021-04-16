@@ -21,7 +21,7 @@ on:
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_BRANCH: openwrt-19.07
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/ARM/S905x3.config
   DIY_P1_SH: scripts/diy-part1.sh
