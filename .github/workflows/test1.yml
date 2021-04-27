@@ -171,6 +171,9 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
