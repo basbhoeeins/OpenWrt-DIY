@@ -54,6 +54,9 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+
     - name: Clone source code
       working-directory: /workdir
       run: |
@@ -91,9 +94,6 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
 
     - name: Compile the firmware
       id: compile
